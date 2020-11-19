@@ -3,8 +3,8 @@ import requests
 import json
 
 def delete_channel(base_url, headers, channel_url):
-  url = f'{base_url}/v3/group_channels/{channel_url}
-  response = requests.request("DELETE", headers=headers)
+  url = f'{base_url}/v3/group_channels/{channel_url}'
+  response = requests.request("DELETE", url, headers=headers)
   return response.ok
 
 def remove_members(base_url, headers, channel_url, member_user_ids):
